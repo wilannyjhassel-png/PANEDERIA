@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | Panadería La Espiga Dorada</title>
+  <meta name="description" content="Pan de agua recién horneado y tortas personalizadas para cumpleaños y bodas en La Vega.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <a class="logo" href="index.html">La Espiga Dorada</a>
+    <nav class="menu">
+      <a href="index.html" class="activo" aria-current="page">Inicio</a>
+      <a href="quienesomos.html">Quiénes somos</a>
+      <a href="contactanos.html">Contáctanos</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Pan caliente y tortas hechas con cariño de familia</h1>
+        <p>Hace 20 años horneamos para el barrio. Ven por tu pan de agua recién salido del horno o encarga la torta de tu próxima celebración.</p>
+        <div class="botones">
+          <a class="boton" href="contactanos.html#pedido">Pedir una torta</a>
+          <a class="boton boton-claro" href="#galeria">Ver nuestras tortas</a>
+        </div>
+        <p class="horario-chip">Abierto todos los días de 6:00 am a 8:00 pm</p>
+      </div>
+      <div class="hero-foto">
+        <!-- Para poner una foto grande: guárdala como fotos/portada.jpg -->
+        <img src="fotos/portada.jpg" alt="">
+        <span class="hero-espiga" aria-hidden="true">🌾</span>
+      </div>
+    </section>
+
+    <section class="seccion" id="galeria">
+      <h2>Tortas que hemos hecho</h2>
+      <p class="intro">Mira algunos de nuestros diseños. ¿Te gustó uno? Pídelo igual o cuéntanos tu idea y lo hacemos a tu gusto.</p>
+
+      <!-- Para agregar una torta nueva: copia la foto a la carpeta "fotos"
+           y copia un bloque <figure> completo cambiando el nombre y el título -->
+      <div class="galeria">
+        <figure class="torta">
+          <img src="images (1).jpeg" alt="">
+          <figcaption>Torta de cumpleaños</figcaption>
+        </figure>
+        <figure class="torta">
+          <img src="images.jpeg" alt="">
+          <figcaption>Torta de boda</figcaption>
+        </figure>
+        <figure class="torta">
+          <img src="images (2).jpeg" alt="">
+          <figcaption>Torta infantil</figcaption>
+        </figure>
+        <figure class="torta">
+          <img src="images (3).jpeg" alt="">
+          <figcaption>Torta de quinceañera</figcaption>
+        </figure>
+        <figure class="torta">
+          <img src="images (4).jpeg" alt="">
+          <figcaption>Postres variados</figcaption>
+        </figure>
+        <figure class="torta">
+          <img src="images (5).jpeg" alt="">
+          <figcaption>Torta personalizada</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="seccion seccion-marron" id="productos">
+      <h2>Lo que horneamos cada día</h2>
+      <div class="productos">
+        <article class="producto">
+          <span class="producto-icono" aria-hidden="true">🥖</span>
+          <h3>Pan de agua</h3>
+          <p>Nuestro clásico, crujiente por fuera y suave por dentro, recién horneado.</p>
+        </article>
+        <article class="producto">
+          <span class="producto-icono" aria-hidden="true">🥐</span>
+          <h3>Pan dulce y repostería</h3>
+          <p>Panecillos, dulces y postres para el desayuno o la merienda.</p>
+        </article>
+        <article class="producto">
+          <span class="producto-icono" aria-hidden="true">🍰</span>
+          <h3>Postres</h3>
+          <p>Porciones y postres individuales para compartir en casa.</p>
+        </article>
+        <article class="producto">
+          <span class="producto-icono" aria-hidden="true">🎂</span>
+          <h3>Tortas personalizadas</h3>
+          <p>Para cumpleaños, bodas y todo lo que quieras celebrar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <h2>Cómo pedir tu torta</h2>
+      <p class="intro">Pide con al menos <strong>3 días de anticipación</strong> para que quede perfecta.</p>
+      <ol class="pasos">
+        <li><strong>Llena el formulario</strong> con la fecha, el tamaño y los detalles que quieras.</li>
+        <li><strong>Te contactamos</strong> para confirmar el diseño y el precio.</li>
+        <li><strong>Pasa a recogerla</strong> el día acordado, fresca y lista para la fiesta.</li>
+      </ol>
+      <p class="botones" style="margin-top:20px"><a class="boton" href="contactanos.html#pedido">Ir al formulario de pedido</a></p>
+    </section>
+  </main>
+  <footer class="pie">
+    <p>Panadería La Espiga Dorada · 20 años horneando para La Vega</p>
+  </footer>
+</body>
+</html>

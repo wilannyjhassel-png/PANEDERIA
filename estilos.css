@@ -1,0 +1,146 @@
+/* ========== COLORES (cámbialos aquí) ========== */
+:root {
+  --dorado: #C8962E;
+  --dorado-oscuro: #9A6F17;
+  --marron: #5B3A1E;
+  --marron-claro: #F1E3D1;
+  --blanco: #FFFFFF;
+  --texto: #3E2A17;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--texto);
+  background: var(--blanco);
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+h1, h2, h3, .logo { font-family: 'Fraunces', serif; color: var(--marron); line-height: 1.2; }
+a { color: var(--dorado-oscuro); }
+:focus-visible { outline: 3px solid var(--dorado); outline-offset: 3px; }
+
+/* ========== ENCABEZADO ========== */
+.encabezado {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+  padding: 12px 6%;
+  background: var(--blanco);
+  border-bottom: 3px solid var(--dorado);
+}
+.logo { font-size: 1.4rem; font-weight: 800; text-decoration: none; }
+.menu { display: flex; gap: 22px; flex-wrap: wrap; }
+.menu a { text-decoration: none; font-weight: 700; color: var(--marron); }
+.menu a:hover { color: var(--dorado-oscuro); text-decoration: underline; }
+.menu a.activo { color: var(--dorado-oscuro); border-bottom: 3px solid var(--dorado); }
+
+/* ========== INICIO ========== */
+.hero {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+  padding: 60px 6%;
+  background: linear-gradient(135deg, var(--marron-claro) 0%, var(--blanco) 70%);
+}
+.hero h1 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 800; margin-bottom: 16px; }
+.hero p { max-width: 52ch; margin-bottom: 22px; }
+.botones { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+.boton {
+  display: inline-block; cursor: pointer; border: 2px solid var(--dorado);
+  background: var(--dorado); color: var(--blanco);
+  padding: 12px 24px; border-radius: 40px;
+  font: 700 1rem 'Nunito', sans-serif; text-decoration: none;
+  transition: background .2s;
+}
+.boton:hover { background: var(--dorado-oscuro); border-color: var(--dorado-oscuro); }
+.boton-claro { background: var(--blanco); color: var(--marron); }
+.boton-claro:hover { background: var(--marron-claro); color: var(--marron); }
+.horario-chip {
+  display: inline-block; margin: 0 !important;
+  background: var(--blanco); border: 1px solid var(--dorado);
+  padding: 6px 16px; border-radius: 40px; font-weight: 600; font-size: .95rem;
+}
+.hero-foto {
+  position: relative; min-height: 340px; border-radius: 28px 120px 28px 28px;
+  background: linear-gradient(160deg, #E8C26A, var(--dorado));
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-espiga { font-size: 7rem; opacity: .85; }
+
+/* ========== SECCIONES ========== */
+.seccion { padding: 64px 6%; }
+.seccion h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); margin-bottom: 12px; }
+.seccion .intro { max-width: 60ch; margin-bottom: 28px; }
+.seccion-marron { background: var(--marron-claro); }
+
+/* Galería (fondo dorado visible mientras no hay foto) */
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.torta {
+  margin: 0; border-radius: 16px; overflow: hidden;
+  background: linear-gradient(160deg, #F4DCA8, #E3B65A);
+}
+.torta img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.torta figcaption { padding: 10px 14px; font-weight: 700; color: var(--marron); background: var(--blanco); border-top: 3px solid var(--dorado); }
+
+/* Productos */
+.productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 24px; }
+.producto { background: var(--blanco); border-radius: 16px; padding: 22px; border-bottom: 4px solid var(--dorado); }
+.producto-icono { font-size: 2.2rem; display: block; margin-bottom: 6px; }
+.producto h3 { font-size: 1.2rem; margin-bottom: 6px; }
+
+/* Pasos */
+.pasos { max-width: 60ch; padding-left: 1.3rem; }
+.pasos li { margin-bottom: 12px; padding-left: 6px; }
+.pasos li::marker { color: var(--dorado-oscuro); font-weight: 800; }
+
+/* Formulario */
+.formulario {
+  max-width: 720px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  background: var(--blanco); padding: 28px; border-radius: 20px; margin-top: 18px;
+}
+.formulario label { display: flex; flex-direction: column; gap: 6px; font-weight: 700; color: var(--marron); }
+.formulario input, .formulario select, .formulario textarea {
+  font: inherit; font-weight: 400; color: var(--texto);
+  padding: 10px 12px; border: 2px solid var(--marron-claro); border-radius: 10px; background: var(--blanco);
+}
+.formulario input:focus, .formulario select:focus, .formulario textarea:focus { border-color: var(--dorado); outline: none; }
+.formulario small { font-weight: 400; color: #7a5c3a; }
+.ancho-completo { grid-column: 1 / -1; }
+.nota { font-size: .92rem; color: #7a5c3a; text-align: center; }
+
+/* Contacto */
+.contacto { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 18px; }
+.contacto h3 { font-size: 1.1rem; margin-bottom: 4px; }
+.pendiente { font-size: .9rem; color: #A12A1B; }
+
+/* Título de páginas internas */
+.titulo-pagina {
+  padding: 56px 6% 40px;
+  background: linear-gradient(135deg, var(--marron-claro) 0%, var(--blanco) 75%);
+}
+.titulo-pagina h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; margin-bottom: 8px; }
+
+/* Quiénes somos */
+.dos-columnas { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.columna-texto p { max-width: 58ch; margin-bottom: 14px; }
+.foto-historia {
+  position: relative; min-height: 320px; border-radius: 100px 28px 28px 28px; overflow: hidden;
+  background: linear-gradient(160deg, #E8C26A, var(--dorado));
+  display: flex; align-items: center; justify-content: center; font-size: 6rem;
+}
+.foto-historia img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Pie */
+.pie { background: var(--marron); color: var(--marron-claro); text-align: center; padding: 22px 6%; }
+
+/* ========== CELULAR ========== */
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding-top: 36px; }
+  .hero-foto { min-height: 220px; border-radius: 24px; order: -1; }
+  .formulario { grid-template-columns: 1fr; padding: 20px; }
+  .encabezado { justify-content: center; }
+  .dos-columnas { grid-template-columns: 1fr; }
+  .foto-historia { min-height: 220px; }
+}

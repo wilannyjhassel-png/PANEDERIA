@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contáctanos | Panadería La Espiga Dorada</title>
+  <meta name="description" content="Dirección, teléfono, horario y formulario para pedir tortas en La Espiga Dorada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <a class="logo" href="index.html">La Espiga Dorada</a>
+      <nav class="menu">
+      <a href="index.html" class="activo" aria-current="page">Inicio</a>
+      <a href="quienesomos.html">Quiénes somos</a>
+      <a href="contactanos.html">Contáctanos</a>
+    </nav>
+  </header>
+  <main>
+    <section class="titulo-pagina">
+      <h1>Contáctanos</h1>
+      <p>Visítanos, llámanos o encarga tu torta con anticipación.</p>
+    </section>
+
+    <section class="seccion">
+      <div class="contacto">
+        <div>
+          <h3>Dirección</h3>
+          <p>La Vega, República Dominicana</p>
+        </div>
+        <div>
+          <h3>Teléfono</h3>
+          <p><a href="tel:+18095550000">809-555-0000</a></p>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <p>Todos los días<br>6:00 am a 8:00 pm</p>
+        </div>
+        <div>
+          <h3>Tortas</h3>
+          <p>Pedidos con mínimo<br>3 días de anticipación</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion-marron" id="pedido">
+      <h2>Pide tu torta</h2>
+      <p class="intro">Llena el formulario y Carmen Rosa te contactará para confirmar. Recuerda pedir con al menos 3 días de anticipación.</p>
+
+      <!-- IMPORTANTE: cambia el correo de abajo por el de la panadería -->
+      <form class="formulario" action="mailto:correo@laespigadorada.com" method="post" enctype="text/plain">
+        <label>Tu nombre
+          <input type="text" name="Nombre" required placeholder="Ej: María Pérez">
+        </label>
+        <label>Tu teléfono
+          <input type="tel" name="Telefono" required placeholder="Ej: 809-555-0000">
+        </label>
+        <label>Fecha en que la necesitas
+          <input type="date" name="Fecha" required>
+          <small>Mínimo 3 días desde hoy.</small>
+        </label>
+        <label>Tamaño
+          <select name="Tamano" required>
+            <option value="">Elige un tamaño</option>
+            <option>Pequeña (8 a 10 porciones)</option>
+            <option>Mediana (15 a 20 porciones)</option>
+            <option>Grande (30 o más porciones)</option>
+            <option>No estoy seguro, necesito ayuda</option>
+          </select>
+        </label>
+        <label class="ancho-completo">Detalles especiales
+          <textarea name="Detalles" rows="4" placeholder="Sabor, colores, mensaje en la torta, tema de la fiesta..."></textarea>
+        </label>
+        <button type="submit" class="boton ancho-completo">Enviar pedido</button>
+        <p class="nota ancho-completo">¿Prefieres WhatsApp? <a href="https://wa.me/18095550000?text=Hola%2C%20quiero%20pedir%20una%20torta">Escríbenos aquí</a> o llámanos al 809-555-0000.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="pie">
+    <p>Panadería La Espiga Dorada · 20 años horneando para La Vega</p>
+  </footer>
+</body>
+</html>
